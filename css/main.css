@@ -1,0 +1,70 @@
+/* 
+    CSS for main structucture
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    height: 90px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: whitesmoke;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 2;
+}
+
+main{
+    flex: 1;
+}
+
+footer{
+    padding-left: 35%;
+    text-align: left;
+    margin-top: auto; /* Fijado en la parte baja */
+}
+#Logo-Container{
+    display: flex;
+    align-items: center;
+}
+#Form-Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-form{
+    margin: 10px;
+    border: none;
+    background-color: none;
+}
+
+#Owner-Form{
+    height: 50px;
+    width: 120px;
+    border-width: 2px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: aqua;
+}
+
+#logo{
+    height: 80px;
+    width: 80px;
+}
+
+#Tittle{
+    font-size: xx-large;
+    font-family: fascinate;
+}

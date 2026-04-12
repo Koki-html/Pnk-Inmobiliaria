@@ -1,0 +1,8 @@
+/*
+    CSS for fonts
+*/
+
+@font-face {
+    font-family: fascinate;
+    src: url(../fonts/Fascinate/Fascinate-Regular.ttf);
+}
