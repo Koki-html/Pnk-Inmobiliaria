@@ -18,7 +18,7 @@
         <!-- Idk how to write this. XD -->
         <div id="Logo-Container">
             <img src="img/icon/Pnk.png" alt="Pnk logo.png" id="logo">
-            <p id="Tittle">Pnk Inmobilaria</p> 
+            <p id="Tittle">Pnk Inmobilaria</p>
         </div>
 
         <!-- Form for login, register and owner options-->
@@ -31,12 +31,36 @@
     </header>
 
     <main>
-        <section>
+        <section id="Carrusel-Section">
             <!-- principal banner of the webpage -->
-            
+            <div id="Carrusel-Container">
+                <img class="carrusel-image" id="carrusel-image" src="img/banner-example.jpg" alt="Principal Banner">
+            </div>
         </section>
-        <section>
+        <section id="Search-Secction">
             <!-- Search bar for properties -->
+            <div id="Search-Main-Container">
+                <div id="Search-Container">
+                    <!-- Searching input and button-->
+                    <label for="Selling-Options">
+                        <select name="Opciones" id="Selling-Options" class="search-input">
+                            <option value="Buy">Venta</option>
+                            <option value="Rent">Arriendo</option>
+                            <option value="Temporal-Rent">Arriendo Temporal</option>
+                        </select>
+                    </label>
+                    <label for="Type-Options">
+                        <select name="Options" id="Type-Options" class="search-input">
+                            <option value="House">Casa</option>
+                            <option value="Apartment">Apartamento</option>
+                            <option value="Office">Oficina</option>
+                            <option value="Store">Locales</option>
+                        </select>
+                    </label>
+                    <input type="text" class="search-input" id="Search-Bar" placeholder="Busca tu propiedad ideal...">
+                    <button class="search-input" id="Search-Button"> <img src="img/search-icon.png" alt="Search" id="Search-Icon"></button>
+                </div>
+            </div>
         </section>
         <section>
             <!-- Featured properties -->

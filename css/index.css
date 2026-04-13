@@ -2,3 +2,86 @@
     CSS for "index.html"
 */
 
+#Carrusel-Section{
+    display: flex;
+    justify-content: center;
+}
+
+#Carrusel-Container{
+    width: 60%;
+    height: 500px;
+    background-color: #ffffff;
+    margin-top: 20px;;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.carrusel-image{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+#Search-Main-Container{
+    border-radius: 25px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    background-color: #FAFAFA50;
+    padding: 20px;
+}
+
+#Search-Container{
+    background-color: #FFFFFF;
+    height: 150px;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.search-input{
+    margin: 2px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #858585;
+
+}
+
+#Search-Button{
+    width: 40px;
+    transition: 0.3s;
+}
+
+#Search-Button:hover{
+    transition: 0.3s;
+    border: 1px solid #E91E63;
+    height: 45px;
+    width: 45px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#Search-Icon{
+    width: 20px;
+    height: 20px;
+}
+
+#Search-Bar{
+    width: 200px;
+    padding-left: 20px;
+}
+
+#Selling-Options{
+    width: 75px;
+}
+
+#Type-Options{
+    width: 75px;
+}
