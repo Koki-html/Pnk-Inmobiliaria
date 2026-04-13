@@ -72,8 +72,8 @@ footer{
 
 #Owner-Form{
     transition: 0.3s;
-    height: 20px;
-    width: 220px;
+    height: 40px;
+    width: 150px;
     border-width: 2px;
     border-radius: 5px;
     border-style: solid;
@@ -82,8 +82,8 @@ footer{
 
 #Owner-Form:hover{
     transition: 0.3s;
-    height: 25px;
-    width: 225px;
+    height: 45px;
+    width: 155px;
     background-color: #E91E63;
     color: #fff;
 }
