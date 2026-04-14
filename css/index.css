@@ -10,12 +10,15 @@
 #Carrusel-Container{
     width: 60%;
     height: 500px;
-    background-color: #ffffff;
     margin-top: 20px;;
     display: flex;
     flex-direction: row;
     border-radius: 25px;
     justify-content: center;
+    background-image: url(../img/banner.webp);
+    background-size: cover;
+    background-position: center;
+    opacity: 60%;
 }
 
 .carrusel-image{
@@ -60,7 +63,11 @@
 #Search-Button{
     width: 40px;
     transition: 0.3s;
+    background-image: url(../img/search-icon.png);
+    background-size: 80%;
     background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #Search-Button:hover{
@@ -68,7 +75,8 @@
     border: 1px solid #E91E63;
     height: 45px;
     width: 45px;
-    color: #fff;
+    background-color: #E91E63;
+    background-image: url(../img/search-icon2.png);
     cursor: pointer;
 }
 
@@ -175,14 +183,46 @@ hr{
     transition: 0.3s;
     border: 1px solid #E91E63;
     cursor: pointer;
-    width: 600px;
+    width: 480px;
     background-color: #FAFAFA;
 }
 
 .property-image{
-    width: 200px;
+    width: 100%;
     height: auto;
     border-radius: 25px;
+    border: 1px solid #E91E63;
+}
+
+#image-1{
+    background-image: url(../img/Casa-pnk1.webp);
+    background-size: cover;
+    background-position: center;
+}
+#image-2{
+    background-image: url(../img/Casa-pnk2.webp);
+    background-size: cover;
+    background-position: center;
+}
+#image-3{
+    background-image: url(../img/Casa-pnk3.webp);
+    background-size: cover;
+    background-position: center;
+}
+#image-4{
+    background-image: url(../img/Casa-pnk1.webp);
+    background-size: cover;
+    background-position: center;
+}
+#image-5{
+    background-image: url(../img/Casa-pnk3.webp);
+    background-size: cover;
+    background-position: center;
+}
+#image-6{
+    background-image: url(../img/Casa-pnk2.webp);
+    background-size: cover;
+    background-position: center;
 }
 
 .hr-vertical{
@@ -201,3 +241,13 @@ hr{
     align-items: center;
     width: 100%;
 }   
+
+.information-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+    text-align: start;
+}

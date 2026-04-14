@@ -1,40 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pnk Inmobilaria</title>
-    <!--Adding the styles for this webpage--> 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/fonts.css">
+    <!--Adding the styles for this webpage-->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
     <!--Adding the icon for the webpage-->
-    <link rel="shortcut icon" href="img/icon/Pnk.ico" type="image/x-icon">
-
+    <link rel="shortcut icon" href="img/icon/Pnk.ico" type="image/x-icon" />
 </head>
-<body>
 
+<body>
     <header>
         <!-- Idk how to write this. XD -->
         <div id="Logo-Container">
-            <img src="img/icon/Pnk.png" alt="Pnk logo.png" id="logo">
+            <img src="img/icon/Pnk.png" alt="Pnk logo.png" id="logo" />
             <p id="Tittle">Pnk Inmobilaria</p>
         </div>
 
         <!-- Form for login, register and owner options-->
         <div id="Form-Container">
-            <button class="button-form" id="Register-Form" href="under-construction.html"> Registrarse </button>
-            <button class="button-form" id="Login-Form" href="under-construction.html"> Iniciar Sesión </button>
-            <button class="button-form" id="Owner-Form" href="under-construction.html"> Publica tu propiedad </button>
+            <button class="button-form" id="Register-Form" href="under-construction.html">
+                Registrarse
+            </button>
+            <button class="button-form" id="Login-Form" href="under-construction.html">
+                Iniciar Sesión
+            </button>
+            <button class="button-form" id="Owner-Form" href="under-construction.html">
+                Publica tu propiedad
+            </button>
         </div>
-        
     </header>
 
     <main>
         <section id="Carrusel-Section">
             <!-- principal banner of the webpage -->
             <div id="Carrusel-Container">
-                <img class="carrusel-image" id="carrusel-image" src="img/banner-example.jpg" alt="Principal Banner">
             </div>
         </section>
         <section id="Search-Secction">
@@ -57,8 +61,8 @@
                             <option value="Store">Locales</option>
                         </select>
                     </label>
-                    <input type="text" class="search-input" id="Search-Bar" placeholder="Busca tu propiedad ideal...">
-                    <button class="search-input" id="Search-Button"> <img src="img/search-icon.png" alt="Search" id="Search-Icon"></button>
+                    <input type="text" class="search-input" id="Search-Bar" placeholder="Busca tu propiedad ideal..." />
+                    <button class="search-input" id="Search-Button"></button>
                 </div>
             </div>
         </section>
@@ -68,108 +72,232 @@
                 <!-- Content container for featured properties -->
                 <div id="Content-Container" class="data-container">
                     <h1>Propiedades Destacadas</h1>
-                    <hr>
+                    <hr />
                     <!-- Principal container for the properties-->
                     <div id="Properties-Container">
                         <!-- All the properties with images and details -->
                         <div class="properties-info" id="Propierties-1">
-                            <img class="property-image" src="img/emotional-support.jpg" alt="House.jpg">
-                            <hr class="hr-vertical">
+                            <div class="property-image" id="image-1">
+                                
+                            </div>
+                            <hr class="hr-vertical" />
                             <div class="property-text">
-                            <h3>Lorem, ipsum dolor.</h3>
-                            <hr>
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <hr />
+                                <div class="information-container">
+                                    <p>
+                                        <strong>Ubicado:</strong>
+                                        <a href="https://maps.app.goo.gl/ogc8WdmL7HPggiLX6">Las compañias, la Serena</a>
+                                        <br />
+                                        <strong>Precio: </strong> $100.000.000 CLP
+                                        <br />
+                                        <strong>Cuartos: </strong> 3
+                                        <br />
+                                        <strong>Baños: </strong> 2
+                                        <br />
+                                        <strong>Superficie: </strong> 150 m²
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div class="properties-info" id="Propierties-2">
-                            <img class="property-image" src="img/emotional-support-for-teto.jpg" alt="House.jpg">
-                            <hr class="hr-vertical">
+                            <div class="property-image" id="image-2">
+                                
+                            </div>
+                            <hr class="hr-vertical" />
                             <div class="property-text">
-                            <h3>Lorem, ipsum dolor.</h3>
-                            <hr>
-                            </div> 
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <hr />
+                                <div class="information-container">
+                                    <p>
+                                        <strong>Ubicado:</strong>
+                                        <a href="https://maps.app.goo.gl/ogc8WdmL7HPggiLX6">El bosque, la Serena</a>
+                                        <br />
+                                        <strong>Precio: </strong> $100.000.000 CLP
+                                        <br />
+                                        <strong>Cuartos: </strong> 3
+                                        <br />
+                                        <strong>Baños: </strong> 2
+                                        <br />
+                                        <strong>Superficie: </strong> 150 m²
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                         <div class="properties-info" id="Propierties-3">
-                            <img class="property-image" src="img/emotional-support.jpg" alt="House.jpg">
-                            <hr class="hr-vertical">
-                            <div class="property-text">
-                            <h3>Lorem, ipsum dolor.</h3>
-                            <hr>
+                            <div class="property-image" id="image-3">
+                                
                             </div>
-                        </div> 
-                        <div class="properties-info" id="Propierties-4">
-                            <img class="property-image" src="img/emotional-support-for-teto.jpg" alt="House.jpg">
-                            <hr class="hr-vertical">
+                            <hr class="hr-vertical" />
                             <div class="property-text">
-                            <h3>Lorem, ipsum dolor.</h3>
-                            <hr>
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <hr />
+                                <div class="information-container">
+                                    <p>
+                                        <strong>Ubicado:</strong>
+                                        <a href="https://maps.app.goo.gl/ogc8WdmL7HPggiLX6">Puertas del mar, la Serena</a>
+                                        <br />
+                                        <strong>Precio: </strong> $100.000.000 CLP
+                                        <br />
+                                        <strong>Cuartos: </strong> 3
+                                        <br />
+                                        <strong>Baños: </strong> 2
+                                        <br />
+                                        <strong>Superficie: </strong> 150 m²
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="properties-info" id="Propierties-4">
+                            <div class="property-image" id="image-4">
+                                
+                            </div>
+                            <hr class="hr-vertical" />
+                            <div class="property-text">
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <hr />
+                                <div class="information-container">
+                                    <p>
+                                        <strong>Ubicado:</strong>
+                                        <a href="https://maps.app.goo.gl/ogc8WdmL7HPggiLX6">Puertas del mar, la Serena</a>
+                                        <br />
+                                        <strong>Precio: </strong> $100.000.000 CLP
+                                        <br />
+                                        <strong>Cuartos: </strong> 3
+                                        <br />
+                                        <strong>Baños: </strong> 2
+                                        <br />
+                                        <strong>Superficie: </strong> 150 m²
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div class="properties-info" id="Propierties-5">
-                            <img class="property-image" src="img/emotional-support.jpg" alt="House.jpg">
-                            <hr class="hr-vertical">
+                            <div class="property-image" id="image-5">
+                                
+                            </div>
+                            <hr class="hr-vertical" />
                             <div class="property-text">
-                            <h3>Lorem, ipsum dolor.</h3>
-                            <hr>
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <hr />
+                                <div class="information-container">
+                                    <p>
+                                        <strong>Ubicado:</strong>
+                                        <a href="https://maps.app.goo.gl/ogc8WdmL7HPggiLX6">Las compañias, La Serena</a>
+                                        <br />
+                                        <strong>Precio: </strong> $100.000.000 CLP
+                                        <br />
+                                        <strong>Cuartos: </strong> 3
+                                        <br />
+                                        <strong>Baños: </strong> 2
+                                        <br />
+                                        <strong>Superficie: </strong> 150 m²
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div class="properties-info" id="Propierties-6">
-                            <img class="property-image" src="img/emotional-support-for-teto.jpg" alt="House.jpg">
-                            <hr class="hr-vertical">
+                            <div class="property-image" id="image-6">
+                                
+                            </div>
+                            <hr class="hr-vertical" />
                             <div class="property-text">
-                            <h3>Lorem, ipsum dolor.</h3>
-                            <hr>
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <hr />
+                                <div class="information-container">
+                                    <p>
+                                        <strong>Ubicado:</strong>
+                                        <a href="https://maps.app.goo.gl/ogc8WdmL7HPggiLX6">El bosque, la Serena</a>
+                                        <br />
+                                        <strong>Precio: </strong> $100.000.000 CLP
+                                        <br />
+                                        <strong>Cuartos: </strong> 3
+                                        <br />
+                                        <strong>Baños: </strong> 2
+                                        <br />
+                                        <strong>Superficie: </strong> 150 m²
+                                    </p>
+                                </div>
                             </div>
                         </div>
+                        -->
                     </div>
                 </div>
                 <!-- Real estate agency containers -->
                 <div id="Agency-Container" class="data-container">
                     <h1>Agencias Inmobiliarias</h1>
-                    <hr>
+                    <hr />
+                    <div id="">
+
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <footer>
         <!-- Datos de contacto-->
         <div id="Information-Container">
             <div id="About-Container">
-                <h2> Acerca de </h2>
-                <br>
+                <h2>Acerca de</h2>
+                <br />
                 <ul>
-                    <li> <p> ¿Quienes Somos? </p> </li>
-                    <li> <p> Terminos y condiciones</p></li>
+                    <li>
+                        <p>¿Quienes Somos?</p>
+                    </li>
+                    <li>
+                        <p>Terminos y condiciones</p>
+                    </li>
                 </ul>
             </div>
             <!-- Support and assitence contact -->
             <div id="Contact-Container">
                 <h2>Contactanos</h2>
-                <br>
+                <br />
                 <ul>
-                <li> <p><strong>Email: </strong> AsistenciaPnk@Pnk.cl </p></li>
-                <li> <p><strong>Fono: </strong> +56 9 6969 6767 </p> </li>
+                    <li>
+                        <p><strong>Email: </strong> AsistenciaPnk@Pnk.cl</p>
+                    </li>
+                    <li>
+                        <p><strong>Fono: </strong> +56 9 6969 6767</p>
+                    </li>
                 </ul>
             </div>
             <!-- Social Media -->
-            <div id="Social-Container"> 
+            <div id="Social-Container">
                 <h2>Redes Sociales</h2>
-                <br>
+                <br />
                 <ul>
-                    <li> <p> <strong>Instragram:</strong> <a href="under-construction.html">@PnkInmobiliarias</a> </p> </li>
-                    <li> <p> <strong>Facebook:</strong> <a href="under-construction.html">Pnk Inmobiliarias</a> </p></li>
+                    <li>
+                        <p>
+                            <strong>Instragram:</strong>
+                            <a href="under-construction.html">@PnkInmobiliarias</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Facebook:</strong>
+                            <a href="under-construction.html">Pnk Inmobiliarias</a>
+                        </p>
+                    </li>
                 </ul>
             </div>
             <!-- Another sites -->
             <div id="Another-Container">
                 <h2>Otros Sitios</h2>
-                <br>
+                <br />
                 <ul>
-                    <li> <p>Developers</p> </li>
-                    <li> <p>Trabaja con nosotros</p></li>
+                    <li>
+                        <p>Developers</p>
+                    </li>
+                    <li>
+                        <p>Trabaja con nosotros</p>
+                    </li>
                 </ul>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
