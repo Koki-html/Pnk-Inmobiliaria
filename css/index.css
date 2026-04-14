@@ -251,3 +251,41 @@ hr{
     justify-content: center;
     text-align: start;
 }
+
+.agency-info{
+    height: 275px;
+    width: 275px;
+    border: 1px solid #E0E0E0;
+    border-radius: 25px;
+    margin: 6px;
+    transition: 0.3s;
+}
+.agency-info:hover{
+    border: 1px solid #E91E63;
+    width: 280px;
+    height: 280px;
+    cursor: pointer;
+    background-color: #FAFAFA;
+    transition: 0.3s;
+}
+
+#inmobiliaria-1{
+    background-image: url(../img/Kasane-inmobiliaria.png);
+    background-size: cover;
+    background-position: center;
+}
+#inmobiliaria-2{
+    background-image: url(../img/inmobiliaria-2.png);
+    background-size: cover;
+    background-position: center;
+}
+#inmobiliaria-3{
+    background-image: url(../img/inmobiliaria-3.png);
+    background-size: cover;
+    background-position: center;
+}
+
+a{
+    color: #000;
+    font-style: normal;
+}
