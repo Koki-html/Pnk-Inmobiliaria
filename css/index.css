@@ -21,13 +21,6 @@
     opacity: 60%;
 }
 
-.carrusel-image{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 25px;
-}
-
 #Search-Main-Container{
     border-radius: 25px;
     position: absolute;
@@ -36,19 +29,19 @@
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    background-color: #FAFAFA50;
+    background-color: var(--surface-overlay);
     padding: 40px;
 }
 
 #Search-Container{
-    background-color: #FFFFFF;
+    background-color: var(--surface-primary);
     height: 150px;
     width: 600px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 2px solid #E0E0E0;
+    border: 2px solid var(--border);
     border-radius: 25px;
 }
 
@@ -56,37 +49,34 @@
     margin: 3px;
     height: 40px;
     border-radius: 10px;
-    border: 1px solid #E91E63;
-
+    border: 1px solid var(--border);
+    background-color: var(--surface-secondary);
+    color: var(--text-primary);
+    padding: 5px 10px;
+    font-size: 14px;
 }
 
 #Search-Button{
     width: 40px;
-    transition: 0.3s;
     background-image: url(../img/search-icon.png);
     background-size: 80%;
-    background-color: #fff;
+    background-color: var(--surface-primary);
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #Search-Button:hover{
-    transition: 0.3s;
-    border: 1px solid #E91E63;
+    border: 1px solid var(--primary);
     height: 45px;
     width: 45px;
-    background-color: #E91E63;
+    background-color: var(--primary);
     background-image: url(../img/search-icon2.png);
     cursor: pointer;
 }
 
-#Search-Icon{
-    width: 20px;
-    height: 20px;
-}
-
 #Search-Bar{
     width: 200px;
+    height: 30px;
     padding-left: 20px;
 }
 
@@ -97,7 +87,7 @@
 
 #Main-Container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: start;
     min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
     padding: 8%;
@@ -108,165 +98,92 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
-    border: 1px solid #E0E0E0;
-    background-color: #FFFFFF;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
     margin: 40px;
+    border: 1px solid var(--border);
+    background-color: var(--surface-primary);
+    border-radius: 25px;
     padding-top: 50px;
 }
 
-#Content-Container{
-    transition: 0.3s;
-    width: 55%;
-    text-align: center;
-    margin-bottom: 40px;
-}
+#Content-Container,
 #Agency-Container{
-    transition: 0.3s;
-    width: 35%;
     text-align: center;
     margin-bottom: 40px;
+    width: 90%;
+    height: 525px;
 }
 
 #Content-Container:hover{
-    transition: 0.3s;
-    border: 1px solid #E91E63;
-    width: 60%;
+    border: 1px solid var(--primary);
+    width: 91%;
+    height: 530px;
     cursor: pointer;
 }
 
 #Agency-Container:hover{
-    transition: 0.3s;
-    border: 1px solid #E91E63;
-    width: 40%;
+    border: 1px solid var(--primary);
+    width: 91%;
     cursor: pointer;
 }
 
 hr{
-    width: 80%;
+    width: 90%;
     border: none;
-    border-top: 1px solid #E91E63;
+    border-top: 1px solid var(--primary);
     margin: 20px 0;
 }   
 
 #Properties-Container{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    display: flex;
     width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 20px;
-}
-
-.properties-info{
+    height: 500px;
+    align-items: start;
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    height: 250px;
-    width: 460px;
-    border: 1px solid #E0E0E0;
-    border-radius: 25px;
-    padding: 10px;
-    transition: 0.3s;
-}
-
-.properties-info:hover{
-    transition: 0.3s;
-    border: 1px solid #E91E63;
-    cursor: pointer;
-    width: 480px;
-    background-color: #FAFAFA;
-}
-
-.property-image{
-    width: 100%;
-    height: auto;
-    border-radius: 25px;
-    border: 1px solid #E91E63;
-}
-
-#image-1{
-    background-image: url(../img/Casa-pnk1.webp);
-    background-size: cover;
-    background-position: center;
-}
-#image-2{
-    background-image: url(../img/Casa-pnk2.webp);
-    background-size: cover;
-    background-position: center;
-}
-#image-3{
-    background-image: url(../img/Casa-pnk3.webp);
-    background-size: cover;
-    background-position: center;
-}
-#image-4{
-    background-image: url(../img/Casa-pnk1.webp);
-    background-size: cover;
-    background-position: center;
-}
-#image-5{
-    background-image: url(../img/Casa-pnk3.webp);
-    background-size: cover;
-    background-position: center;
-}
-#image-6{
-    background-image: url(../img/Casa-pnk2.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.hr-vertical{
-    border: none;
-    border-left: 1px solid #E91E63;
-    height: 100%;
-    width: 1px;
-    margin: 0 10px;
-}
-
-.property-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    padding: 10px;
-    align-items: center;
-    width: 100%;
-}   
-
-.information-container{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
     justify-content: center;
-    text-align: start;
+    align-items: center;
+}
+
+.propertie-info{
+    height: 300px;
+    width: 250px;
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.propertie-info:hover{
+    border: 1px solid var(--primary);
+    width: 255px;
+    height: 305px;
+    cursor: pointer;
+    background-color: var(--surface-secondary);
+}
+
+.house-image{
+    width: 100%;
+    height: 165px;
+    border-radius: 25px;
 }
 
 .agency-info{
     height: 275px;
     width: 275px;
-    border: 1px solid #E0E0E0;
+    background-color: var(--surface-primary);
+    border: 1px solid var(--border);
     border-radius: 25px;
     margin: 6px;
-    transition: 0.3s;
 }
 .agency-info:hover{
-    border: 1px solid #E91E63;
+    border: 1px solid var(--primary);
     width: 280px;
     height: 280px;
     cursor: pointer;
-    background-color: #FAFAFA;
-    transition: 0.3s;
+    background-color: var(--surface-secondary);
 }
 
 #inmobiliaria-1{
@@ -286,6 +203,6 @@ hr{
 }
 
 a{
-    color: #000;
+    color: var(--text-dark);
     font-style: normal;
 }

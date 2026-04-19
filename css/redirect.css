@@ -1,0 +1,35 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/banner.webp);
+    background-size: cover;   
+}
+#Main-Container{
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:45%;
+    transform: translateY(-50%);
+    background-color: var(--surface-overlay-dark);
+    border-radius: 25px;
+}
+
+#Loading-Animation{
+    margin-top: 50px;
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--surface-tertiary);
+    border-radius: 50px;
+    border-left: 5px solid var(--primary);
+    animation: Loading-Animation 1s linear infinite;
+}
+
+@keyframes Loading-Animation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -6,3 +6,8 @@
     font-family: fascinate;
     src: url(../fonts/Fascinate/Fascinate-Regular.ttf);
 }
+
+@font-face {
+    font-family: LobsterTwo-Bold;
+    src: url(../fonts/LobsterTwo-Bold.ttf);
+}

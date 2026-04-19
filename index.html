@@ -1,37 +1,51 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pnk Inmobilaria</title>
+    <!-- API's-->
+    <link rel="stylesheet" href="css/MaterialIcon.css">
     <!--Adding the styles for this webpage-->
+    <link rel="stylesheet" href="css/ColorPalette.css">
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/fonts.css" />
+    <!-- Adding the Scripts for this webpage-->
     <!--Adding the icon for the webpage-->
-    <link rel="shortcut icon" href="img/icon/Pnk.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/icon/Pnk.ico" type="image/x-icon"/>
 </head>
 
 <body>
     <header>
         <!-- Idk how to write this. XD -->
-        <div id="Logo-Container">
-            <img src="img/icon/Pnk.png" alt="Pnk logo.png" id="logo" />
-            <p id="Tittle">Pnk Inmobilaria</p>
-        </div>
-
+        <a href="index.html" id="Index-Href">
+            <div id="Logo-Container">
+                <img src="img/icon/Pnk.png" alt="Pnk logo.png" id="logo">
+                <p id="Tittle">Pnk Inmobilaria</p>
+            </div>
+        </a>
         <!-- Form for login, register and owner options-->
         <div id="Form-Container">
-            <button class="button-form" id="Register-Form" href="under-construction.html">
-                Registrarse
+            <button id="Dark-Mode">
+                <img src="img/dark-mode.png" alt="">
             </button>
-            <button class="button-form" id="Login-Form" href="under-construction.html">
-                Iniciar Sesión
-            </button>
-            <button class="button-form" id="Owner-Form" href="under-construction.html">
-                Publica tu propiedad
-            </button>
+            <a href="register.html">
+                <button class="button-form" id="Register-Form">
+                    Registrarse
+                </button>
+            </a>
+            <a href="login.html">
+                <button class="button-form" id="Login-Form">
+                    Iniciar Sesión
+                </button>
+            </a>
+            <a href="owner.html">
+                <button class="button-form" id="Owner-Form">
+                    Publica tu propiedad
+                </button>
+            </a>
         </div>
     </header>
 
@@ -72,170 +86,83 @@
                 <!-- Content container for featured properties -->
                 <div id="Content-Container" class="data-container">
                     <h1>Propiedades Destacadas</h1>
-                    <hr />
+                    <hr/>
                     <!-- Principal container for the properties-->
                     <div id="Properties-Container">
                         <!-- All the properties with images and details -->
-                        <div class="properties-info" id="Propierties-1">
-                            <div class="property-image" id="image-1">
-                                
-                            </div>
-                            <hr class="hr-vertical" />
-                            <div class="property-text">
-                                <h3>Lorem, ipsum dolor.</h3>
-                                <hr />
-                                <div class="information-container">
-                                    <p>
-                                        <strong>Ubicado:</strong>
-                                        <a href="https://maps.app.goo.gl/ogc8WdmL7HPggiLX6">Las compañias, la Serena</a>
-                                        <br />
-                                        <strong>Precio: </strong> $230.000.000 CLP
-                                        <br />
-                                        <strong>Cuartos: </strong> 8
-                                        <br />
-                                        <strong>Baños: </strong> 5
-                                        <br />
-                                        <strong>Superficie: </strong> 120 m²
+                        
+                        <!-- 1 -->
+                        <div class="propertie-info">
+                            <a href="house.html">
+                                <h3>En venta</h3>
+                                <hr>
+                                <img src="img/Casa-pnk1.webp" alt="house" class="house-image">
+                                <div class="info-house">
+                                    <p>Detalles de la propiedad <br> Departamento de 32 m² con 3 habitaciones y 2 baños
                                     </p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="properties-info" id="Propierties-2">
-                            <div class="property-image" id="image-2">
-                                
-                            </div>
-                            <hr class="hr-vertical" />
-                            <div class="property-text">
-                                <h3>Lorem, ipsum dolor.</h3>
-                                <hr />
-                                <div class="information-container">
-                                    <p>
-                                        <strong>Ubicado:</strong>
-                                        <a href="https://maps.app.goo.gl/ogc8WdmL7HPggiLX6">El bosque, la Serena</a>
-                                        <br />
-                                        <strong>Precio: </strong> $80.000.000 CLP
-                                        <br />
-                                        <strong>Cuartos: </strong> 3
-                                        <br />
-                                        <strong>Baños: </strong> 2
-                                        <br />
-                                        <strong>Superficie: </strong> 45 m²
+
+                        <!-- 2 -->
+                        <div class="propertie-info">
+                            <a href="house.html">
+                                <h3>En alquiler</h3>
+                                <hr>
+                                <img src="img/Casa-pnk1.webp" alt="house" class="house-image">
+                                <div class="info-house">
+                                    <p>Detalles de la propiedad <br> Apartamento de 50 m² con 2 habitaciones y 1 baños
                                     </p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="properties-info" id="Propierties-3">
-                            <div class="property-image" id="image-3">
-                                
-                            </div>
-                            <hr class="hr-vertical" />
-                            <div class="property-text">
-                                <h3>Lorem, ipsum dolor.</h3>
-                                <hr />
-                                <div class="information-container">
-                                    <p>
-                                        <strong>Ubicado:</strong>
-                                        <a href="https://maps.app.goo.gl/ogc8WdmL7HPggiLX6">Puertas del mar, la Serena</a>
-                                        <br />
-                                        <strong>Precio: </strong> $350.000.000 CLP
-                                        <br />
-                                        <strong>Cuartos: </strong> 6
-                                        <br />
-                                        <strong>Baños: </strong> 4
-                                        <br />
-                                        <strong>Superficie: </strong> 150 m²
+
+                        <!-- 3 -->
+                        <div class="propertie-info">
+                            <a href="house.html">
+                                <h3>En venta</h3>
+                                <hr>
+                                <img src="img/Casa-pnk1.webp" alt="house" class="house-image">
+                                <div class="info-house">
+                                    <p>Detalles de la propiedad <br> Terreno de 120 m² con 1 habitación y 1 baños
                                     </p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <!--
-                        <div class="properties-info" id="Propierties-4">
-                            <div class="property-image" id="image-4">
-                                
-                            </div>
-                            <hr class="hr-vertical" />
-                            <div class="property-text">
-                                <h3>Lorem, ipsum dolor.</h3>
-                                <hr />
-                                <div class="information-container">
-                                    <p>
-                                        <strong>Ubicado:</strong>
-                                        <a href="https://maps.app.goo.gl/ogc8WdmL7HPggiLX6">Puertas del mar, la Serena</a>
-                                        <br />
-                                        <strong>Precio: </strong> $100.000.000 CLP
-                                        <br />
-                                        <strong>Cuartos: </strong> 3
-                                        <br />
-                                        <strong>Baños: </strong> 2
-                                        <br />
-                                        <strong>Superficie: </strong> 150 m²
+
+                        <!-- 4 -->
+                        <div class="propertie-info">
+                            <a href="house.html">
+                                <h3>En alquiler</h3>
+                                <hr>
+                                <img src="img/Casa-pnk1.webp" alt="house" class="house-image">
+                                <div>
+                                    <p>Detalles de la propiedad <br> Departamento de 32 m² con 3 habitaciones y 2 baños
                                     </p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="properties-info" id="Propierties-5">
-                            <div class="property-image" id="image-5">
-                                
-                            </div>
-                            <hr class="hr-vertical" />
-                            <div class="property-text">
-                                <h3>Lorem, ipsum dolor.</h3>
-                                <hr />
-                                <div class="information-container">
-                                    <p>
-                                        <strong>Ubicado:</strong>
-                                        <a href="https://maps.app.goo.gl/ogc8WdmL7HPggiLX6">Las compañias, La Serena</a>
-                                        <br />
-                                        <strong>Precio: </strong> $100.000.000 CLP
-                                        <br />
-                                        <strong>Cuartos: </strong> 3
-                                        <br />
-                                        <strong>Baños: </strong> 2
-                                        <br />
-                                        <strong>Superficie: </strong> 150 m²
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="properties-info" id="Propierties-6">
-                            <div class="property-image" id="image-6">
-                                
-                            </div>
-                            <hr class="hr-vertical" />
-                            <div class="property-text">
-                                <h3>Lorem, ipsum dolor.</h3>
-                                <hr />
-                                <div class="information-container">
-                                    <p>
-                                        <strong>Ubicado:</strong>
-                                        <a href="https://maps.app.goo.gl/ogc8WdmL7HPggiLX6">El bosque, la Serena</a>
-                                        <br />
-                                        <strong>Precio: </strong> $100.000.000 CLP
-                                        <br />
-                                        <strong>Cuartos: </strong> 3
-                                        <br />
-                                        <strong>Baños: </strong> 2
-                                        <br />
-                                        <strong>Superficie: </strong> 150 m²
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        -->
+
+
                     </div>
                 </div>
                 <!-- Real estate agency containers -->
                 <div id="Agency-Container" class="data-container">
                     <h1>Agencias Inmobiliarias</h1>
                     <hr />
-                    <div class="agency-info" id="inmobiliaria-1">
-                    </div>
-
-                    <div class="agency-info" id="inmobiliaria-2">
-
-                    </div>
-                    <div class="agency-info" id="inmobiliaria-3">
-
+                    <div id="Agency-Contents">
+                        <a href="redirect-page.html">
+                            <button class="agency-info" id="inmobiliaria-1">
+                            </button>
+                        </a>
+                        <a href="redirect-page.html">
+                            <button class="agency-info" id="inmobiliaria-2">
+                            </button>
+                        </a>
+                        <a href="redirect-page.html">
+                            <button class="agency-info" id="inmobiliaria-3">
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -250,10 +177,14 @@
                 <br />
                 <ul>
                     <li>
-                        <p>¿Quienes Somos?</p>
+                        <a href="redirect-page.html">
+                            <p>¿Quienes Somos?</p>
+                        </a>
                     </li>
                     <li>
-                        <p>Terminos y condiciones</p>
+                        <a href="redirect-page.html">
+                            <p>Terminos y condiciones</p>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -263,7 +194,9 @@
                 <br />
                 <ul>
                     <li>
-                        <p><strong>Email: </strong> AsistenciaPnk@Pnk.cl</p>
+                        <a href="redirect-page.html">
+                            <p><strong>Email: </strong> AsistenciaPnk@Pnk.cl</p>
+                        </a>
                     </li>
                     <li>
                         <p><strong>Fono: </strong> +56 9 6969 6767</p>
@@ -295,15 +228,20 @@
                 <br />
                 <ul>
                     <li>
-                        <p>Developers</p>
+                        <a href="redirect-page.html">
+                            <p>Developers</p>
+                        </a>
                     </li>
                     <li>
-                        <p>Trabaja con nosotros</p>
+                        <a href="redirect-page.html">
+                            <p>Trabaja con nosotros</p>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </footer>
+    <script src="js/darkmode.js"></script>
 </body>
 
 </html>
