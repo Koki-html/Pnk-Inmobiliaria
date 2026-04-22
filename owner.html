@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Owner Register & Dashboard | Sistema de Gestión</title>
+    <link rel="stylesheet" href="css/ColorPalette.css">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/owner.css" />
+</head>
+<body>
+
+<div class="app-container">
+    <!-- Pantalla de REGISTRO / LOGIN (Owner) -->
+    <div id="authScreen" class="screen">
+        <div class="auth-wrapper">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h1>🏢 Owner Access</h1>
+                    <p>Registra tu negocio o accede como propietario</p>
+                </div>
+
+                <!-- Formulario de Registro -->
+                <div id="registerFormContainer">
+                    <form id="ownerRegisterForm" novalidate>
+                        <div class="double-row">
+                            <div class="input-group" id="regGroupName">
+                                <label>Nombre completo <span class="required-star">*</span></label>
+                                <input type="text" id="regFullname" placeholder="Juan Pérez" autocomplete="name">
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="input-group" id="regGroupBusiness">
+                                <label>Nombre del negocio <span class="required-star">*</span></label>
+                                <input type="text" id="regBusiness" placeholder="Mi Empresa SRL">
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+                        <div class="input-group" id="regGroupEmail">
+                            <label>Email corporativo <span class="required-star">*</span></label>
+                            <input type="email" id="regEmail" placeholder="owner@negocio.com">
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="double-row">
+                            <div class="input-group" id="regGroupPhone">
+                                <label>Teléfono</label>
+                                <input type="tel" id="regPhone" placeholder="+34 600 000 000">
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="input-group" id="regGroupCountry">
+                                <label>País <span class="required-star">*</span></label>
+                                <select id="regCountry">
+                                    <option value="" disabled selected>Selecciona</option>
+                                    <option>México</option><option>España</option><option>Argentina</option>
+                                    <option>Colombia</option><option>Chile</option><option>Perú</option>
+                                    <option>Estados Unidos</option>
+                                </select>
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+                        <div class="input-group" id="regGroupPassword">
+                            <label>Contraseña <span class="required-star">*</span></label>
+                            <input type="password" id="regPassword" placeholder="Mínimo 6 caracteres">
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="input-group" id="regGroupConfirm">
+                            <label>Confirmar contraseña <span class="required-star">*</span></label>
+                            <input type="password" id="regConfirmPassword" placeholder="Repite tu contraseña">
+                            <div class="error-message"></div>
+                        </div>
+                        <button type="submit" class="btn-primary">🚀 Registrar como Owner</button>
+                    </form>
+                    <div class="auth-switch">
+                        ¿Ya tienes cuenta? <a id="showLoginBtn">Iniciar Sesión</a>
+                    </div>
+                </div>
+
+                <!-- Formulario de Login -->
+                <div id="loginFormContainer" class="hidden">
+                    <form id="ownerLoginForm" novalidate>
+                        <div class="input-group" id="loginGroupEmail">
+                            <label>Email <span class="required-star">*</span></label>
+                            <input type="email" id="loginEmail" placeholder="owner@negocio.com">
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="input-group" id="loginGroupPassword">
+                            <label>Contraseña <span class="required-star">*</span></label>
+                            <input type="password" id="loginPassword" placeholder="••••••">
+                            <div class="error-message"></div>
+                        </div>
+                        <button type="submit" class="btn-primary">🔐 Iniciar Sesión</button>
+                    </form>
+                    <div class="auth-switch">
+                        ¿No tienes cuenta? <a id="showRegisterBtn">Regístrate aquí</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla DASHBOARD (Owner protegido) -->
+    <div id="dashboardScreen" class="screen hidden">
+        <div class="dashboard-header">
+            <div class="logo-area">
+                <h2>📊 Owner Dashboard</h2>
+                <p style="font-size: 0.75rem; color: #475569;">Panel de control del negocio</p>
+            </div>
+            <div class="owner-info">
+                <span id="dashboardOwnerName">Cargando...</span>
+                <button id="logoutButton" class="logout-btn">Cerrar sesión</button>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="stat-card">
+                <h3>📈 Total de Ventas (Simulado)</h3>
+                <div class="stat-value" id="statSales">$0</div>
+                <p style="font-size: 0.7rem; margin-top: 0.5rem;">últimos 30 días</p>
+            </div>
+            <div class="stat-card">
+                <h3>👥 Clientes registrados</h3>
+                <div class="stat-value" id="statClients">0</div>
+                <p style="font-size: 0.7rem;">+12% vs mes anterior</p>
+            </div>
+            <div class="stat-card">
+                <h3>🏷️ Productos activos</h3>
+                <div class="stat-value" id="statProducts">0</div>
+                <p style="font-size: 0.7rem;">en catálogo</p>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <h3>📋 Información del Propietario</h3>
+            <div class="profile-detail" id="ownerProfileDetail">
+                <!-- Dinámico -->
+                <div class="detail-item"><div class="detail-label">Nombre completo</div><div class="detail-value" id="profileFullname">-</div></div>
+                <div class="detail-item"><div class="detail-label">Negocio</div><div class="detail-value" id="profileBusiness">-</div></div>
+                <div class="detail-item"><div class="detail-label">Email</div><div class="detail-value" id="profileEmail">-</div></div>
+                <div class="detail-item"><div class="detail-label">Teléfono</div><div class="detail-value" id="profilePhone">-</div></div>
+                <div class="detail-item"><div class="detail-label">País</div><div class="detail-value" id="profileCountry">-</div></div>
+            </div>
+        </div>
+        <div style="margin-top: 1rem; text-align: center; font-size: 0.7rem; color: #94a3b8;">
+            Sistema de gestión integrado | Datos seguros en localStorage
+        </div>
+    </div>
+</div>
+
+<div id="toastMsg" class="toast-msg"></div>
+
+
+<script src="js/darkmode.js"></script>
+<script src="js/owner.js"></script>
+
+</body>
+</html>

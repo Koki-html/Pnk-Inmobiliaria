@@ -71,6 +71,7 @@ li{
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
+    color: var(--text-primary);
     background-color: var(--surface-secondary);
     border: 1px solid var(--primary);
     border-radius: 5px;

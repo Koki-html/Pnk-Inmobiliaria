@@ -36,7 +36,7 @@
 #Search-Container{
     background-color: var(--surface-primary);
     height: 150px;
-    width: 600px;
+    width: 700px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -57,10 +57,9 @@
 }
 
 #Search-Button{
-    width: 40px;
-    background-image: url(../img/search-icon.png);
+    width: 70px;
     background-size: 80%;
-    background-color: var(--surface-primary);
+    background-color: var(--surface-secondary);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -68,9 +67,9 @@
 #Search-Button:hover{
     border: 1px solid var(--primary);
     height: 45px;
-    width: 45px;
+    width: 75px;
     background-color: var(--primary);
-    background-image: url(../img/search-icon2.png);
+    color: #fff;
     cursor: pointer;
 }
 
