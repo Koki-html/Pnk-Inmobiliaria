@@ -177,6 +177,7 @@ function handleLogin(event) {
     sessionStorage.setItem("ownerSession", JSON.stringify({ id: currentOwner.id, email: currentOwner.email }));
     showDashboard();
     showToast(`👋 Bienvenido ${currentOwner.fullname}`, false);
+    window.location.href = "../owner.html";
 }
 
 // Cargar Dashboard con datos del owner y estadísticas dinámicas (simuladas)

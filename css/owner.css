@@ -231,7 +231,7 @@ body {
 }
 
 .stat-card h3 {
-    color: #334155;
+    color: var(--text-secondary);
     font-size: 0.9rem;
     letter-spacing: 1px;
     margin-bottom: 0.5rem;
@@ -240,7 +240,7 @@ body {
 .stat-value {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #0f172a;
+    color: var(--text-primary);
 }
 
 .profile-section {
@@ -274,7 +274,7 @@ body {
 .detail-value {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #1e293b;
+    color: var(--text-primary);
     margin-top: 0.2rem;
     word-break: break-word;
 }
