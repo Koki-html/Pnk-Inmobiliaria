@@ -1,13 +1,13 @@
 :root {
     --primary: #E91E63;
     --border: #E0E0E0;
-    --surface-primary: #FFFFFF;
-    --surface-secondary: #FAFAFA;
+    --surface-primary: #e4e4e5;
+    --surface-secondary: #bebebe;
     --text-dark: #000000;
     --surface-overlay: rgba(250, 250, 250, 0.5);
     --text-primary: #333333;
     --text-header: #212121;
-    --surface-tertiary: #f3f3f3;
+    --surface-tertiary: #949494;
     --surface-overlay-dark: rgba(243, 243, 243, 0.75);
     --primary-alpha: rgba(233, 30, 99, 0.35);
 }
