@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f5f5f3;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      color: #1a1a1a;
+    }
+
+    .screen { display: none; width: 100%; max-width: 380px; }
+    .screen.active { display: block; }
+
+    .card {
+      background: #ffffff;
+      border: 0.5px solid rgba(0,0,0,0.12);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+
+    .card-header { text-align: center; margin-bottom: 1.5rem; }
+
+    .icon-wrap {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: #f1efe8;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 0.75rem;
+    }
+    .icon-wrap i { font-size: 22px; color: #5f5e5a; }
+
+    .card-header h1 { font-size: 18px; font-weight: 500; margin-bottom: 4px; }
+    .card-header p  { font-size: 13px; color: #5f5e5a; }
+
+    .field { margin-bottom: 1rem; }
+    .field label { display: block; font-size: 13px; color: #5f5e5a; margin-bottom: 6px; }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%; padding: 8px 12px;
+      border: 0.5px solid rgba(0,0,0,0.2);
+      border-radius: 8px;
+      font-size: 14px; color: #1a1a1a;
+      background: #fff;
+      outline: none;
+      transition: border-color 0.15s;
+      height: 36px;
+    }
+    input:focus { border-color: rgba(0,0,0,0.45); box-shadow: 0 0 0 3px rgba(0,0,0,0.06); }
+
+    .pass-wrap { position: relative; }
+    .pass-wrap input { padding-right: 40px; }
+    .toggle-pass {
+      position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+      background: none; border: none; cursor: pointer;
+      color: #888780; padding: 0; line-height: 1;
+    }
+    .toggle-pass i { font-size: 16px; }
+
+    .btn-primary {
+      width: 100%; padding: 9px;
+      background: #1a1a1a; color: #fff;
+      border: none; border-radius: 8px;
+      font-size: 14px; font-weight: 500;
+      cursor: pointer; margin-top: 0.5rem;
+      transition: opacity 0.15s, transform 0.1s;
+    }
+    .btn-primary:hover  { opacity: 0.85; }
+    .btn-primary:active { transform: scale(0.98); }
+    .btn-primary i { font-size: 15px; vertical-align: -2px; margin-right: 6px; }
+
+    .error-msg {
+      font-size: 13px; color: #a32d2d;
+      background: #fcebeb;
+      border: 0.5px solid rgba(163,45,45,0.3);
+      border-radius: 8px;
+      padding: 8px 12px; margin-top: 0.75rem;
+      display: none;
+    }
+    .error-msg i { font-size: 14px; vertical-align: -2px; margin-right: 4px; }
+
+    .attempts-bar {
+      display: none; align-items: center;
+      gap: 6px; margin-top: 0.75rem;
+    }
+    .attempts-bar span { font-size: 12px; color: #888780; }
+    .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(0,0,0,0.15);
+      transition: background 0.2s;
+    }
+    .dot.used { background: #e24b4a; }
+
+    .hint-section {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 0.5px solid rgba(0,0,0,0.1);
+    }
+    .hint-section p { font-size: 12px; color: #888780; margin-bottom: 6px; }
+    .hint-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+    .chip {
+      font-size: 12px; padding: 3px 10px;
+      border-radius: 8px;
+      background: #f1efe8;
+      border: 0.5px solid rgba(0,0,0,0.1);
+      cursor: pointer; color: #5f5e5a;
+      transition: background 0.15s;
+    }
+    .chip:hover { background: #e4e2d8; }
+
+    .avatar {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: #e6f1fb;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 500; color: #185fa5;
+      margin: 0 auto 0.75rem;
+    }
+
+    .session-name { text-align: center; font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+    .session-sub  { text-align: center; font-size: 13px; color: #5f5e5a; margin-bottom: 1.5rem; }
+
+    .menu-list { border-top: 0.5px solid rgba(0,0,0,0.1); }
+    .menu-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 12px 0;
+      border-bottom: 0.5px solid rgba(0,0,0,0.08);
+      font-size: 14px; color: #1a1a1a;
+      cursor: pointer;
+      transition: color 0.15s;
+    }
+    .menu-item:last-child { border-bottom: none; }
+    .menu-item:hover { color: #185fa5; }
+    .menu-item.danger { color: #a32d2d; }
+    .menu-item.danger:hover { color: #791f1f; }
+    .menu-item i { font-size: 17px; }
+
+    .info-panel {
+      display: none;
+      margin-top: 1rem; padding: 10px 12px;
+      background: #f1efe8;
+      border-radius: 8px; font-size: 13px;
+      line-height: 1.8;
+    }
+    .info-panel .label { color: #5f5e5a; }
+    .info-panel .val   { font-weight: 500; }
+
+    .blocked-icon-wrap {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: #fcebeb;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .blocked-icon-wrap i { font-size: 22px; color: #a32d2d; }
+    .blocked-title { font-size: 16px; font-weight: 500; text-align: center; margin-bottom: 6px; }
+    .blocked-sub   { font-size: 13px; color: #5f5e5a; text-align: center; margin-bottom: 1.5rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Pantalla: Login -->
+  <div id="screen-login" class="screen active">
+    <div class="card">
+      <div class="card-header">
+        <div class="icon-wrap"><i class="ti ti-lock"></i></div>
+        <h1>Iniciar sesión</h1>
+        <p>Ingresa tus credenciales</p>
+      </div>
+
+      <div class="field">
+        <label for="inp-user">Usuario</label>
+        <input type="text" id="inp-user" placeholder="Ej: admin" autocomplete="username" />
+      </div>
+
+      <div class="field">
+        <label for="inp-pass">Contraseña</label>
+        <div class="pass-wrap">
+          <input type="password" id="inp-pass" placeholder="••••••••" autocomplete="current-password" />
+          <button class="toggle-pass" onclick="togglePass()" aria-label="Mostrar/ocultar contraseña">
+            <i class="ti ti-eye" id="eye-icon"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="attempts-bar" id="dots-bar">
+        <span>Intentos:</span>
+        <div class="dot" id="d1"></div>
+        <div class="dot" id="d2"></div>
+        <div class="dot" id="d3"></div>
+      </div>
+
+      <div class="error-msg" id="error-msg">
+        <i class="ti ti-alert-circle"></i>
+        <span id="error-text">Credenciales incorrectas.</span>
+      </div>
+
+      <button class="btn-primary" onclick="doLogin()">
+        <i class="ti ti-login"></i>Entrar
+      </button>
+
+      <div class="hint-section">
+        <p>Usuarios de prueba:</p>
+        <div class="hint-chips">
+          <span class="chip" onclick="fill('admin','admin123')">admin / admin123</span>
+          <span class="chip" onclick="fill('maria','maria456')">maria / maria456</span>
+          <span class="chip" onclick="fill('juan','juan789')">juan / juan789</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pantalla: Sesión activa -->
+  <div id="screen-session" class="screen">
+    <div class="card">
+      <div class="avatar" id="user-avatar">AD</div>
+      <p class="session-name" id="user-name">admin</p>
+      <p class="session-sub">Sesión activa</p>
+
+      <div class="menu-list">
+        <div class="menu-item" onclick="toggleInfo()">
+          <i class="ti ti-user"></i> Ver mi perfil
+        </div>
+        <div class="menu-item" onclick="toggleInfo()">
+          <i class="ti ti-settings"></i> Configuración
+        </div>
+        <div class="menu-item danger" onclick="doLogout()">
+          <i class="ti ti-logout"></i> Cerrar sesión
+        </div>
+      </div>
+
+      <div class="info-panel" id="info-panel">
+        <div><span class="label">Usuario: </span><span class="val" id="info-user"></span></div>
+        <div><span class="label">Rol: </span><span class="val">estándar</span></div>
+        <div><span class="label">Estado: </span><span class="val" style="color:#3b6d11;">activo</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pantalla: Bloqueado -->
+  <div id="screen-blocked" class="screen">
+    <div class="card" style="text-align:center;">
+      <div class="blocked-icon-wrap"><i class="ti ti-lock-off"></i></div>
+      <p class="blocked-title">Acceso bloqueado</p>
+      <p class="blocked-sub">Demasiados intentos fallidos.</p>
+      <button class="btn-primary" onclick="resetLogin()">
+        <i class="ti ti-refresh"></i>Intentar de nuevo
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const USERS = { admin: 'admin123', maria: 'maria456', juan: 'juan789' };
+    const MAX_ATTEMPTS = 3;
+    let attempts = 0;
+    let passVisible = false;
+
+    function show(id) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.getElementById('screen-' + id).classList.add('active');
+    }
+
+    function fill(u, p) {
+      document.getElementById('inp-user').value = u;
+      document.getElementById('inp-pass').value = p;
+      document.getElementById('error-msg').style.display = 'none';
+    }
+
+    function togglePass() {
+      const inp  = document.getElementById('inp-pass');
+      const icon = document.getElementById('eye-icon');
+      passVisible = !passVisible;
+      inp.type    = passVisible ? 'text' : 'password';
+      icon.className = passVisible ? 'ti ti-eye-off' : 'ti ti-eye';
+    }
+
+    function doLogin() {
+      const u = document.getElementById('inp-user').value.trim();
+      const p = document.getElementById('inp-pass').value;
+
+      if (USERS[u] && USERS[u] === p) {
+        document.getElementById('user-avatar').textContent = u.slice(0, 2).toUpperCase();
+        document.getElementById('user-name').textContent = u;
+        document.getElementById('info-user').textContent = u;
+        document.getElementById('info-panel').style.display = 'none';
+        attempts = 0;
+        show('session');
+      } else {
+        attempts++;
+        const bar = document.getElementById('dots-bar');
+        bar.style.display = 'flex';
+        for (let i = 1; i <= 3; i++) {
+          document.getElementById('d' + i).className = 'dot' + (i <= attempts ? ' used' : '');
+        }
+        const err = document.getElementById('error-msg');
+        err.style.display = 'block';
+        if (attempts >= MAX_ATTEMPTS) {
+          show('blocked');
+        } else {
+          document.getElementById('error-text').textContent =
+            'Credenciales incorrectas. ' + (MAX_ATTEMPTS - attempts) + ' intento(s) restante(s).';
+        }
+      }
+    }
+
+    function toggleInfo() {
+      const panel = document.getElementById('info-panel');
+      panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function doLogout() {
+      document.getElementById('inp-user').value = '';
+      document.getElementById('inp-pass').value = '';
+      document.getElementById('error-msg').style.display = 'none';
+      document.getElementById('dots-bar').style.display = 'none';
+      attempts = 0;
+      show('login');
+    }
+
+    function resetLogin() {
+      attempts = 0;
+      document.getElementById('inp-user').value = '';
+      document.getElementById('inp-pass').value = '';
+      document.getElementById('error-msg').style.display = 'none';
+      document.getElementById('dots-bar').style.display = 'none';
+      for (let i = 1; i <= 3; i++) document.getElementById('d' + i).className = 'dot';
+      show('login');
+    }
+
+    document.getElementById('inp-user').addEventListener('keydown', e => {
+      if (e.key === 'Enter') document.getElementById('inp-pass').focus();
+    });
+    document.getElementById('inp-pass').addEventListener('keydown', e => {
+      if (e.key === 'Enter') doLogin();
+    });
+  </script>
+</body>
+</html>
