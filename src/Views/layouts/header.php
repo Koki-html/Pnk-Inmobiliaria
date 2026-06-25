@@ -24,7 +24,7 @@
                     Iniciar Sesión
                 </button>
             </a>
-            <a href="/owner">
+            <a href="/register-owner">
                 <button class="button-form" id="Owner-Form">
                     Publica tu propiedad
                 </button>
