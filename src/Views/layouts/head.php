@@ -8,5 +8,7 @@
     <link rel="stylesheet" href="/css/ColorPalette.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/fonts.css">
+    <?php echo $pageStyles ?? ''; ?>
     <!--Adding the icon for the webpage-->
     <link rel="shortcut icon" href="img/icon/Pnk.ico" type="image/x-icon">
+</head>

@@ -1,5 +1,3 @@
-
-</head>
 <body>
 
     <header>
@@ -16,17 +14,17 @@
                 <img src="img/dark-mode.png" class="theme-mode" id="Dark-Mode-Icon" alt="Modo oscuro">
                 <img src="img/light-mode.png" class="theme-mode" id="Light-Mode-Icon" alt="Modo claro">
             </button>
-            <a href="/Register">
+            <a href="/register">
                 <button class="button-form" id="Register-Form">
                     Registrarse
                 </button>
             </a>
-            <a href="/Login">
+            <a href="/login">
                 <button class="button-form" id="Login-Form">
                     Iniciar Sesión
                 </button>
             </a>
-            <a href="/Owner">
+            <a href="/owner">
                 <button class="button-form" id="Owner-Form">
                     Publica tu propiedad
                 </button>

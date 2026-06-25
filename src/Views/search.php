@@ -93,7 +93,7 @@ require __DIR__ . '/layouts/header.php';
             <hr style="border-color: var(--primary);">
             <div id="House-Grid">
                 <div class="house-info" id="house-one">
-                    <a href="/House">
+                    <a href="/house">
                         <div src="img/Casa-pnk1.webp" alt="Casa-Pnk" class="house-image" id="House-One"></div>
                         <hr>
                         <p class="house-text" id="Text-One">Casa en <span id="Comuna-One">Comuna</span>, <span id="Region-One">Región</span></p>

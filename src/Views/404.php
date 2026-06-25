@@ -8,6 +8,7 @@ require __DIR__ . '/layouts/head.php';
 require __DIR__ . '/layouts/header.php';
 ?>
 <!-- Main content of the webpage -->
+
 <main>
     <div id="error-container">
         <div id="error-title-container">

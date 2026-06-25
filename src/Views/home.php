@@ -2,7 +2,7 @@
 require __DIR__ . '/layouts/head.php';
 ?>
 
-<link rel="stylesheet" href="/css/index.css">
+<link rel="stylesheet" href="css/index.css">
 
 <?php
 require __DIR__ . '/layouts/header.php';
@@ -35,7 +35,7 @@ require __DIR__ . '/layouts/header.php';
                     </select>
                 </label>
                 <input type="text" class="search-input" id="Search-Bar" placeholder="Busca tu propiedad ideal..." />
-                <a href="/Search"><button class="search-input" id="Search-Button">Buscar</button></a>
+                <a href="/search"><button class="search-input" id="Search-Button">Buscar</button></a>
             </div>
         </div>
     </section>
@@ -52,7 +52,7 @@ require __DIR__ . '/layouts/header.php';
 
                     <!-- 1 -->
                     <div class="propertie-info">
-                        <a href="/House">
+                        <a href="/house">
                             <h3>En venta</h3>
                             <hr>
                             <img src="img/Casa-pnk1.webp" alt="house" class="house-image">
@@ -65,7 +65,7 @@ require __DIR__ . '/layouts/header.php';
 
                     <!-- 2 -->
                     <div class="propertie-info">
-                        <a href="/House">
+                        <a href="/house">
                             <h3>En alquiler</h3>
                             <hr>
                             <img src="img/Casa-pnk1.webp" alt="house" class="house-image">
@@ -78,7 +78,7 @@ require __DIR__ . '/layouts/header.php';
 
                     <!-- 3 -->
                     <div class="propertie-info">
-                        <a href="/House">
+                        <a href="/house">
                             <h3>En venta</h3>
                             <hr>
                             <img src="img/Casa-pnk1.webp" alt="house" class="house-image">
@@ -91,7 +91,7 @@ require __DIR__ . '/layouts/header.php';
 
                     <!-- 4 -->
                     <div class="propertie-info">
-                        <a href="/House">
+                        <a href="/house">
                             <h3>En alquiler</h3>
                             <hr>
                             <img src="img/Casa-pnk1.webp" alt="house" class="house-image">
@@ -110,15 +110,15 @@ require __DIR__ . '/layouts/header.php';
                 <h1>Agencias Inmobiliarias</h1>
                 <hr />
                 <div id="Agency-Contents">
-                    <a href="/Redirect">
+                    <a href="/redirect">
                         <button class="agency-info" id="inmobiliaria-1">
                         </button>
                     </a>
-                    <a href="/Redirect">
+                    <a href="/redirect">
                         <button class="agency-info" id="inmobiliaria-2">
                         </button>
                     </a>
-                    <a href="Redirect">
+                    <a href="/redirect">
                         <button class="agency-info" id="inmobiliaria-3">
                         </button>
                     </a>
