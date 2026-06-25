@@ -198,3 +198,80 @@ a{
     color: #000;
     text-decoration: none;
 }
+#Dashboard-Form{
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            #ff4f8f
+        );
+
+    color: white;
+
+    border: none;
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+
+    padding: 12px 22px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 20px
+        var(--primary-alpha);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        filter .25s ease;
+}
+
+#Dashboard-Form:hover{
+
+    transform:
+        translateY(-3px);
+
+    filter:
+        brightness(1.08);
+
+    box-shadow:
+        0 15px 35px
+        var(--primary-alpha);
+}
+
+#Dashboard-Form:active{
+
+    transform:
+        translateY(0);
+}
+
+#Dashboard-Form::before{
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 60%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.3),
+            transparent
+        );
+
+}

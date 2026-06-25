@@ -38,6 +38,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/darkmode.js"></script>
+    
 </body>
+<script src="/js/darkmode.js"></script>
 </html>

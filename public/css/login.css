@@ -128,3 +128,18 @@
         align-items: flex-start;
     }
 }
+.login-error{
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: #d32f2f;
+    color: white;
+
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    border-radius: 1rem;
+
+    text-align: center;
+    font-weight: 600;
+}

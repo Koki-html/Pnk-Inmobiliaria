@@ -1,10 +1,11 @@
 <?php
-$pageStyles = '<link rel="stylesheet" href="/css/redirect.css">';
-require __DIR__ . '/layouts/head.php';
-?>
 
-<?php
+$pageTitle = 'Redirigiendo | PNK Inmobiliaria';
+$pageStyle = 'redirect.css';
+
+require __DIR__ . '/layouts/head.php';
 require __DIR__ . '/layouts/header.php';
+
 ?>
 
 <main>
@@ -14,6 +15,4 @@ require __DIR__ . '/layouts/header.php';
     </div>
 </main>
 
-<?php
-require __DIR__ . '/layouts/footer.php';
-?>
+<?php require __DIR__ . '/layouts/footer.php'; ?>
